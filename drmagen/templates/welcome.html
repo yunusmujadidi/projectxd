@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block title %} Coba? {% endblock %} {% block
+content %}
+<div id="notfound">
+    <div class="notfound">
+        <div class="notfound-404">
+            <h1>Hai, {{ name }}!</h1>
+        </div>
+        <h2>Mau coba diagnosa penyakit lambung ga?</h2>
+        <div class="maudiagga">
+            <form action="{{ link }}mau" method="POST">
+                <button class="btn-mau" type="submit" value="submit">
+                    Mau
+                </button>
+            </form>
+            <form action="{{ link }}gamau" method="POST">
+                <button class="btn-gamau" type="submit" value="submit">
+                    Engga
+                </button>
+            </form>
+        </div>
+    </div>
+</div>
+{%endblock%}

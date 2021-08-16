@@ -1,0 +1,19 @@
+{% extends 'base.html' %} {% block title %} Diagnosis {% endblock %} {% block
+content %}
+<div id="notfound">
+    <div class="notfound">
+        <div class="notfound-404">
+            <h1>Hai, {{ name }}!</h1>
+        </div>
+        <h2>{{ pertanyaan }}</h2>
+        <form action="{{ link }}hasil" method="POST">
+            <button class="btn-mau" type="submit" name="iya" value="submit">
+                Iya
+            </button>
+            <button class="btn-gamau" type="submit" name="tidak" value="submit">
+                Tidak
+            </button>
+        </form>
+    </div>
+</div>
+{%endblock%}

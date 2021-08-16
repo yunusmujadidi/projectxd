@@ -1,0 +1,26 @@
+{% extends 'base.html' %} {% block title %} Hasil {% endblock %} {% block
+content %}
+<div id="notfound">
+    <div class="notfound">
+        <div class="notfound-404">
+            {% if deskripsiPenyakit %}
+            <h1>
+                {{nama}}, Berikut merupakan hasil diagnosis berdasarkan gejala
+                yang kamu masukkan
+            </h1>
+            {% else %}
+            <h1>{{nama}}, Berdasarkan gejala yang kamu masukkan</h1>
+            {% endif %} {%if terjangkitPenyakit!='Sepertinya kamu sehat-sehat
+            saja ❤️'%}
+            <h2><b>Penyakit: </b></h2>
+            {%endif%}
+            <h2>{{ terjangkitPenyakit }}</h2>
+            {% if deskripsiPenyakit %}
+            <h2><b>Deskripsi: </b></h2>
+            <h2>{{ deskripsiPenyakit }}</h2>
+            {% endif %}
+            <a href="{{ awal }}"><span class="arrow"></span>Kembali ke awal</a>
+        </div>
+    </div>
+</div>
+{%endblock%}

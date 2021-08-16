@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block title %} Mau {% endblock %} {% block content
+%}
+<div id="notfound">
+    <div class="notfound">
+        <div class="notfound-404">
+            <h1>Hai, {{ name }}!</h1>
+        </div>
+        <h2>
+            Perkenalkan, namaku Dr. Magen. Aku akan menemanimu untuk
+            berkonsultasi mengenai penyakit lambung...
+        </h2>
+        <h2>Silakan jawab beberapa pertanyaan berikut ini yaaa</h2>
+        <form
+            action="{{ link }}diagnose"
+            method="POST"
+            class="notfound-searching"
+            style="top: auto; right: auto"
+        >
+            <button type="submit" value="submit">OKEEEEE</button>
+        </form>
+    </div>
+</div>
+{%endblock%}
